@@ -14,7 +14,7 @@ namespace Web.DataTransferObject.DiscountDTO
         public int PercentageOfDiscount { get; set; }
         public string ImageUrl { get; set; }
         public bool DiscountStatus { get; set; }
-        public DateTime StartDate { get; set; } = DateTime.Now;
-        public DateTime EndDate { get; set; } = DateTime.Now.AddDays(30); // Default to 30 days from now
+        public DateTime StartDate { get; set; } 
+        public DateTime EndDate { get; set; } 
     }
 }

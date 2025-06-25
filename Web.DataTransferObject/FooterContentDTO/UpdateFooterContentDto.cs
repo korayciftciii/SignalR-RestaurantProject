@@ -8,8 +8,9 @@ using Web.DataTransferObject.SocialLinkDTO;
 
 namespace Web.DataTransferObject.FooterContentDTO
 {
-   public class CreateFooterContent
+   public class UpdateFooterContentDto
     {
+        public int FooterContentId { get; set; }
 
         public string LocationLabel { get; set; }
         public string LocationUrl { get; set; }

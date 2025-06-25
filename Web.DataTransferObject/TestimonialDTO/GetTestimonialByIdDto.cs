@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Web.DataTransferObject.TestimonialDTO
 {
-  public  class ResultTestimonialDto
+  public  class GetTestimonialByIdDto
     {
         public int TestimonialId { get; set; }
         public string CustomerFullName { get; set; }
@@ -14,6 +14,6 @@ namespace Web.DataTransferObject.TestimonialDTO
         public string Comment { get; set; }
         public string ImageUrl { get; set; }
         public bool CommentStatus { get; set; }
-        public DateTime CreatedDate { get; set; } 
+        public DateTime CreatedDate { get; set; }
     }
 }

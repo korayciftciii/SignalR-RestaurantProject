@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Web.DataTransferObject.CategoryDTO
 {
-   public class ResultCategoryDto
+   public class GetCategoryByIdDto
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public bool CategoryStatus { get; set; } 
+        public bool CategoryStatus { get; set; } = true;
     }
 }

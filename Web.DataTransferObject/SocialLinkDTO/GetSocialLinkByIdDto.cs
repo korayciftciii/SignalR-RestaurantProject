@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Web.DataTransferObject.SocialLinkDTO
 {
-   public class ResultSocialLinkDto
+   public class GetSocialLinkByIdDto
     {
         public int SocialLinkId { get; set; }
 
         public int FooterContentId { get; set; }
 
-        public string PlatformName { get; set; } 
-        public string Url { get; set; }      
-        public string IconUrl { get; set; }    
+        public string PlatformName { get; set; }
+        public string Url { get; set; }
+        public string IconUrl { get; set; }
     }
 }
