@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Web.EntityLayer.Entities
+namespace Web.DataTransferObject.SocialLinkDTO
 {
-  public  class SocialLink
+   public class ResultSocialLinkDto
     {
         public int SocialLinkId { get; set; }
 
         public int FooterContentId { get; set; }
-        public FooterContent FooterContent { get; set; }
 
         public string PlatformName { get; set; } // Örn: Instagram, LinkedIn
         public string Url { get; set; }          // Örn: https://instagram.com/dukkan

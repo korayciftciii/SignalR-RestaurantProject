@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Web.DataTransferObject.TestimonialDTO
+{
+  public  class CreateTestimonialDto
+    {
+        public string CustomerFullName { get; set; }
+        public string Title { get; set; }
+        public string Comment { get; set; }
+        public string ImageUrl { get; set; }
+        public bool CommentStatus { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now; // Default to current date and time
+    }
+}

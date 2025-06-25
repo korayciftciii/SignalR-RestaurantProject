@@ -12,8 +12,8 @@ using Web.DataAccessLayer.Concrete;
 namespace Web.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250625114633_InitialProject")]
-    partial class InitialProject
+    [Migration("20250625141938_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -182,11 +182,11 @@ namespace Web.DataAccessLayer.Migrations
 
             modelBuilder.Entity("Web.EntityLayer.Entities.OpeningHour", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("OpeningHourId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OpeningHourId"));
 
                     b.Property<TimeSpan?>("CloseTime")
                         .HasColumnType("time");
@@ -203,7 +203,7 @@ namespace Web.DataAccessLayer.Migrations
                     b.Property<TimeSpan?>("OpenTime")
                         .HasColumnType("time");
 
-                    b.HasKey("Id");
+                    b.HasKey("OpeningHourId");
 
                     b.HasIndex("FooterContentId");
 
@@ -279,11 +279,11 @@ namespace Web.DataAccessLayer.Migrations
 
             modelBuilder.Entity("Web.EntityLayer.Entities.SocialLink", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("SocialLinkId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SocialLinkId"));
 
                     b.Property<int>("FooterContentId")
                         .HasColumnType("int");
@@ -300,7 +300,7 @@ namespace Web.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("SocialLinkId");
 
                     b.HasIndex("FooterContentId");
 

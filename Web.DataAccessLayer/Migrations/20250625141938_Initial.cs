@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Web.DataAccessLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialProject : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -158,7 +158,7 @@ namespace Web.DataAccessLayer.Migrations
                 name: "OpeningHours",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    OpeningHourId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FooterContentId = table.Column<int>(type: "int", nullable: false),
                     DayOfWeek = table.Column<int>(type: "int", nullable: false),
@@ -168,7 +168,7 @@ namespace Web.DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OpeningHours", x => x.Id);
+                    table.PrimaryKey("PK_OpeningHours", x => x.OpeningHourId);
                     table.ForeignKey(
                         name: "FK_OpeningHours_FooterContents_FooterContentId",
                         column: x => x.FooterContentId,
@@ -181,7 +181,7 @@ namespace Web.DataAccessLayer.Migrations
                 name: "SocialLinks",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    SocialLinkId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FooterContentId = table.Column<int>(type: "int", nullable: false),
                     PlatformName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -190,7 +190,7 @@ namespace Web.DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SocialLinks", x => x.Id);
+                    table.PrimaryKey("PK_SocialLinks", x => x.SocialLinkId);
                     table.ForeignKey(
                         name: "FK_SocialLinks_FooterContents_FooterContentId",
                         column: x => x.FooterContentId,

@@ -4,19 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Web.EntityLayer.Entities
+namespace Web.DataTransferObject.OpeningHourDTO
 {
-    public class OpeningHour
+   public class CreateOpeningHourDto
     {
-        public int OpeningHourId { get; set; }
         public int FooterContentId { get; set; }
-        public FooterContent FooterContent { get; set; }
-
         public DayOfWeek DayOfWeek { get; set; }
         public bool IsClosed { get; set; } = false;
-
         public TimeSpan? OpenTime { get; set; }
         public TimeSpan? CloseTime { get; set; }
     }
-
 }
