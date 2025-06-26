@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<About> TGetAll()
         {
             var data = _aboutDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No About records found");
-            }
+          
             return data;
         }
 
         public About TGetById(int id)
         {
           var datum=_aboutDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("About not found");
-            }
+          
             return datum;
         }
 

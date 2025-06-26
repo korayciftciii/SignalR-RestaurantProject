@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Slider> TGetAll()
         {
             var data = _sliderDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Slider records found");
-            }
+         
             return data;
         }
 
         public Slider TGetById(int id)
         {
            var datum = _sliderDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Slider not found");
-            }
+          
             return datum;   
         }
 

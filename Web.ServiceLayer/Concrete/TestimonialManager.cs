@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Testimonial> TGetAll()
         {
             var data = _testimonialDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Testimonial records found");
-            }
+          
             return data;
         }
 
         public Testimonial TGetById(int id)
         {
            var datum = _testimonialDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Testimonial not found");
-            }
+       
             return datum;
         }
 

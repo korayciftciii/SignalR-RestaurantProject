@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<SocialLink> TGetAll()
         {
             var data=_socialLinkDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No SocialLink records found");
-            }
+         
             return data;
         }
 
         public SocialLink TGetById(int id)
         {
             var datum=_socialLinkDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("SocialLink not found");
-            }
+           
             return datum;
         }
 

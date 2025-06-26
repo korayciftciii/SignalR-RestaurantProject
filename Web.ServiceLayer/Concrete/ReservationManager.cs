@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Reservation> TGetAll()
         {
            var data = _reservationDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Reservation records found");
-            }
+        
             return data;
         }
 
         public Reservation TGetById(int id)
         {
           var datum = _reservationDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Reservation not found");
-            }
+          
             return datum;
         }
 

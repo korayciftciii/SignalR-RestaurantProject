@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Food> TGetAll()
         {
             var data = _foodDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Food records found");
-            }
+      
             return data;
         }
 
         public Food TGetById(int id)
         {
            var datum=_foodDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Food not found");
-            }
+      
             return datum;
         }
 

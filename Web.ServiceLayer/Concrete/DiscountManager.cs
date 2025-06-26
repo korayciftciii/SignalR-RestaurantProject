@@ -13,6 +13,11 @@ namespace Web.ServiceLayer.Concrete
     {
         private readonly IDiscountDAL _discountDAL;
 
+        public DiscountManager(IDiscountDAL discountDAL)
+        {
+            _discountDAL = discountDAL;
+        }
+
         public void TDelete(Discount entity)
         {
            _discountDAL.Delete(entity);
@@ -21,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Discount> TGetAll()
         {
            var data=_discountDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Discount records found");
-            }
+        
             return data;    
         }
 
         public Discount TGetById(int id)
         {
            var datum=_discountDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Discount not found");
-            }
+       
             return datum;   
         }
 

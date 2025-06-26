@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<Category> TGetAll()
         {
             var data = _categoryDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No Category records found");
-            }
+           
             return data;
         }
 
         public Category TGetById(int id)
         {
             var datum=_categoryDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("Category not found");
-            }
+       
             return datum;
         }
 

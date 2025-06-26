@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<FooterContent> TGetAll()
         {
             var data = _footerContentDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No FooterContent records found");
-            }
+      
             return data;
         }
 
         public FooterContent TGetById(int id)
         {
            var datum=_footerContentDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("FooterContent not found");
-            }
+       
             return datum;
         }
 

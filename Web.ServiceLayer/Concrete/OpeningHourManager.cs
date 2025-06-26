@@ -9,11 +9,11 @@ using Web.ServiceLayer.Abstract;
 
 namespace Web.ServiceLayer.Concrete
 {
-    public class OpeningHoursManager : IOpeningHourService
+    public class OpeningHourManager : IOpeningHourService
     {
         private readonly IOpeningHourDAL _openingHourDAL;
 
-        public OpeningHoursManager(IOpeningHourDAL openingHourDAL)
+        public OpeningHourManager(IOpeningHourDAL openingHourDAL)
         {
             _openingHourDAL = openingHourDAL;
         }
@@ -26,20 +26,14 @@ namespace Web.ServiceLayer.Concrete
         public List<OpeningHour> TGetAll()
         {
            var data=_openingHourDAL.GetAll();
-            if (data == null || !data.Any())
-            {
-                throw new Exception("No OpeningHour records found");
-            }
+      
             return data;
         }
 
         public OpeningHour TGetById(int id)
         {
             var datum = _openingHourDAL.GetById(id);
-            if (datum == null)
-            {
-                throw new Exception("OpeningHour not found");
-            }
+         
             return datum;
         }
 
