@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Component.InvokeAsync("AdminHeader")
+</head>
+<body>
+    <div class="wrapper">
+        @await Component.InvokeAsync("AdminAppBar")
+        @await Component.InvokeAsync("AdminSideBar")
+        <div class="main-panel">
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+            @await Component.InvokeAsync("AdminFooter")
+        </div>
+    </div>
+    @await Component.InvokeAsync("AdminScripts")
+</body>
+</html>

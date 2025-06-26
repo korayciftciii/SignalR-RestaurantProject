@@ -9,5 +9,6 @@ namespace Web.ServiceLayer.Abstract
 {
    public interface IFoodService : IGenericService<Food>
     {
+        List<Food> TFoodGetWithCategory();
     }
 }

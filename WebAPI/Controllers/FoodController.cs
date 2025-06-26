@@ -57,7 +57,7 @@ namespace WebAPI.Controllers
             var foodEntity = _mapper.Map<Food>(createFoodDto);
             _foodService.TInsert(foodEntity);
             // Assuming Food entity has an Id property
-            return CreatedAtAction(nameof(FoodGetById), new { id = foodEntity.FoodId }, foodEntity);
+            return CreatedAtAction(nameof(FoodGetById), new { id = foodEntity}, foodEntity);
         }
         [HttpPut]
         public IActionResult FoodUpdate(UpdateFoodDto updateFoodDto)

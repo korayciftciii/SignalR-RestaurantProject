@@ -9,5 +9,7 @@ namespace Web.DataAccessLayer.Abstract
 {
    public interface IFoodDAL :IGenericDAL<Food>
     {
+        List<Food> FoodGetWithCategory();
+
     }
 }

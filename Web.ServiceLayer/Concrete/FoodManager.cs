@@ -23,6 +23,12 @@ namespace Web.ServiceLayer.Concrete
             _foodDAL.Delete(entity);
         }
 
+        public List<Food> TFoodGetWithCategory()
+        {
+            var data = _foodDAL.FoodGetWithCategory();
+            return data;
+        }
+
         public List<Food> TGetAll()
         {
             var data = _foodDAL.GetAll();
