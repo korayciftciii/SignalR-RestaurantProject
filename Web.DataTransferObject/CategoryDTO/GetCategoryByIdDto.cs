@@ -9,7 +9,7 @@ namespace Web.DataTransferObject.CategoryDTO
    public class GetCategoryByIdDto
     {
         public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public bool CategoryStatus { get; set; } = true;
+        public string CategoryName { get; set; } = null!;
+        public bool CategoryStatus { get; set; }
     }
 }

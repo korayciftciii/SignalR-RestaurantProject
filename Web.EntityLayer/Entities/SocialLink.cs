@@ -11,10 +11,10 @@ namespace Web.EntityLayer.Entities
         public int SocialLinkId { get; set; }
 
         public int FooterContentId { get; set; }
-        public FooterContent FooterContent { get; set; }
+        public FooterContent? FooterContent { get; set; }
 
-        public string PlatformName { get; set; } // Örn: Instagram, LinkedIn
-        public string Url { get; set; }          // Örn: https://instagram.com/dukkan
-        public string IconUrl { get; set; }    // (isteğe bağlı) CSS ikon class'ı: fab fa-instagram gibi
+        public string PlatformName { get; set; } = null!; // Örn: Instagram, LinkedIn
+        public string Url { get; set; } = null!;          // Örn: https://instagram.com/dukkan
+        public string? IconUrl { get; set; }
     }
 }

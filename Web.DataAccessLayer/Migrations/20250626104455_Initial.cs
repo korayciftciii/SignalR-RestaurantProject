@@ -17,9 +17,9 @@ namespace Web.DataAccessLayer.Migrations
                 {
                     AboutId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -47,9 +47,9 @@ namespace Web.DataAccessLayer.Migrations
                     DiscountId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DiscountTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PercentageOfDiscount = table.Column<int>(type: "int", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DiscountStatus = table.Column<bool>(type: "bit", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndDate = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -65,12 +65,12 @@ namespace Web.DataAccessLayer.Migrations
                 {
                     FooterContentId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LocationLabel = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LocationUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StoreNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StoreMail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FooterTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FooterDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    LocationLabel = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LocationUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StoreNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    StoreMail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FooterTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FooterDescription = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -101,7 +101,7 @@ namespace Web.DataAccessLayer.Migrations
                     SliderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SliderTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SliderDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SliderDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ButtonLabel = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ButtonUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -119,9 +119,9 @@ namespace Web.DataAccessLayer.Migrations
                     TestimonialId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerFullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CommentStatus = table.Column<bool>(type: "bit", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -137,9 +137,9 @@ namespace Web.DataAccessLayer.Migrations
                     FoodId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FoodName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FoodStatus = table.Column<bool>(type: "bit", nullable: false),
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -186,7 +186,7 @@ namespace Web.DataAccessLayer.Migrations
                     FooterContentId = table.Column<int>(type: "int", nullable: false),
                     PlatformName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IconUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    IconUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

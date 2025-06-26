@@ -12,7 +12,7 @@ using Web.DataAccessLayer.Concrete;
 namespace Web.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250625141938_Initial")]
+    [Migration("20250626104455_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -34,15 +34,12 @@ namespace Web.DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutId"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("AboutId");
@@ -79,7 +76,6 @@ namespace Web.DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DiscountId"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("DiscountStatus")
@@ -93,7 +89,6 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PercentageOfDiscount")
@@ -119,7 +114,6 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FoodName")
@@ -130,7 +124,6 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
@@ -152,27 +145,21 @@ namespace Web.DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FooterContentId"));
 
                     b.Property<string>("FooterDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FooterTitle")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LocationLabel")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LocationUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StoreMail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StoreNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FooterContentId");
@@ -265,7 +252,6 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SliderDescription")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SliderTitle")
@@ -289,7 +275,6 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("IconUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PlatformName")
@@ -316,7 +301,6 @@ namespace Web.DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TestimonialId"));
 
                     b.Property<string>("Comment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("CommentStatus")
@@ -330,11 +314,9 @@ namespace Web.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("TestimonialId");
@@ -345,7 +327,7 @@ namespace Web.DataAccessLayer.Migrations
             modelBuilder.Entity("Web.EntityLayer.Entities.Food", b =>
                 {
                     b.HasOne("Web.EntityLayer.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("Foods")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -373,6 +355,11 @@ namespace Web.DataAccessLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("FooterContent");
+                });
+
+            modelBuilder.Entity("Web.EntityLayer.Entities.Category", b =>
+                {
+                    b.Navigation("Foods");
                 });
 
             modelBuilder.Entity("Web.EntityLayer.Entities.FooterContent", b =>

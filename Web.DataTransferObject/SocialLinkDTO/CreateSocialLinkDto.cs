@@ -8,11 +8,9 @@ namespace Web.DataTransferObject.SocialLinkDTO
 {
   public  class CreateSocialLinkDto
     {
-
         public int FooterContentId { get; set; }
-
-        public string PlatformName { get; set; } // Örn: Instagram, LinkedIn
-        public string Url { get; set; }          // Örn: https://instagram.com/dukkan
-        public string IconUrl { get; set; }    // (isteğe bağlı) CSS ikon class'ı: fab fa-instagram gibi
+        public string PlatformName { get; set; } = null!;
+        public string Url { get; set; } = null!;
+        public string? IconUrl { get; set; }
     }
 }

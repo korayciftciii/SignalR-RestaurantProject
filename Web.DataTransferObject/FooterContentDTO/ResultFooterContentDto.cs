@@ -11,15 +11,14 @@ namespace Web.DataTransferObject.FooterContentDTO
    public class ResultFooterContentDto
     {
         public int FooterContentId { get; set; }
+        public string? LocationLabel { get; set; }
+        public string? LocationUrl { get; set; }
+        public string? StoreNumber { get; set; }
+        public string? StoreMail { get; set; }
+        public string? FooterTitle { get; set; }
+        public string? FooterDescription { get; set; }
 
-        public string LocationLabel { get; set; }
-        public string LocationUrl { get; set; }
-        public string StoreNumber { get; set; }
-        public string StoreMail { get; set; }
-        public string FooterTitle { get; set; }
-        public string FooterDescription { get; set; }
-
-        public ICollection<ResultOpeningHourDto> OpeningHours { get; set; } = new List<ResultOpeningHourDto>();
-        public ICollection<ResultSocialLinkDto> SocialLinks { get; set; } = new List<ResultSocialLinkDto>();
+        public List<ResultOpeningHourDto>? OpeningHours { get; set; }
+        public List<ResultSocialLinkDto>? SocialLinks { get; set; }
     }
 }
