@@ -2,7 +2,7 @@
 	<div class="scrollbar-inner sidebar-wrapper">
 		<div class="user">
 			<div class="photo">
-				<img src="assets/img/profile.jpg">
+				<img src="~/dashboard/assets/img/profile.jpg">
 			</div>
 			<div class="info">
 				<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -59,22 +59,22 @@
 			</li>
 			<li class="nav-item">
 				<a href="tables.html">
-					<i class="la la-th"></i>
-					<p>Tables</p>
+					<i class="la la-calendar-o"></i>
+					<p>Reservations</p>
 					<span class="badge badge-count">6</span>
 				</a>
 			</li>
 			<li class="nav-item">
 				<a href="notifications.html">
 					<i class="la la-bell"></i>
-					<p>Notifications</p>
+					<p>Foods</p>
 					<span class="badge badge-success">3</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="typography.html">
-					<i class="la la-font"></i>
-					<p>Typography</p>
+				<a asp-controller="Category" asp-action="Index" asp-area="Admin">
+					<i class="la la-tags"></i>
+					<p>Categories</p>
 					<span class="badge badge-danger">25</span>
 				</a>
 			</li>
@@ -83,12 +83,6 @@
 					<i class="la la-fonticons"></i>
 					<p>Icons</p>
 				</a>
-			</li>
-			<li class="nav-item update-pro">
-				<button data-toggle="modal" data-target="#modalUpdate">
-					<i class="la la-hand-pointer-o"></i>
-					<p>Update To Pro</p>
-				</button>
 			</li>
 		</ul>
 	</div>
