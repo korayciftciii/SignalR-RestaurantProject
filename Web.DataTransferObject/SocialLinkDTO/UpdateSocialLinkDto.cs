@@ -9,9 +9,9 @@ namespace Web.DataTransferObject.SocialLinkDTO
   public  class UpdateSocialLinkDto
     {
         public int SocialLinkId { get; set; }
-        public int FooterContentId { get; set; }
+        public int FooterContentId { get; set; } = 1;
         public string PlatformName { get; set; } = null!;
         public string Url { get; set; } = null!;
-        public string? IconUrl { get; set; }
+        public string? IconClass { get; set; }
     }
 }

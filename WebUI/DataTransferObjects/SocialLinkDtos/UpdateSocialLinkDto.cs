@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Web.DataTransferObject.SocialLinkDTO
+﻿namespace WebUI.DataTransferObjects.SocialLinkDtos
 {
-  public  class CreateSocialLinkDto
+    public class UpdateSocialLinkDto
     {
+        public int SocialLinkId { get; set; }
         public int FooterContentId { get; set; } = 1;
         public string PlatformName { get; set; } = null!;
         public string Url { get; set; } = null!;

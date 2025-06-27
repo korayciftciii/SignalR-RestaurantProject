@@ -15,6 +15,6 @@ namespace Web.EntityLayer.Entities
 
         public string PlatformName { get; set; } = null!; // Örn: Instagram, LinkedIn
         public string Url { get; set; } = null!;          // Örn: https://instagram.com/dukkan
-        public string? IconUrl { get; set; }
+        public string? IconClass { get; set; }
     }
 }

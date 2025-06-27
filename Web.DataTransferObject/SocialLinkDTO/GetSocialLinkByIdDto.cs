@@ -12,6 +12,6 @@ namespace Web.DataTransferObject.SocialLinkDTO
         public int FooterContentId { get; set; }
         public string PlatformName { get; set; } = null!;
         public string Url { get; set; } = null!;
-        public string? IconUrl { get; set; }
+        public string? IconClass { get; set; }
     }
 }
