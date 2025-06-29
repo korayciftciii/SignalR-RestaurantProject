@@ -9,7 +9,6 @@ namespace Web.DataTransferObject.SocialLinkDTO
    public class GetSocialLinkByIdDto
     {
         public int SocialLinkId { get; set; }
-        public int FooterContentId { get; set; }
         public string PlatformName { get; set; } = null!;
         public string Url { get; set; } = null!;
         public string? IconClass { get; set; }

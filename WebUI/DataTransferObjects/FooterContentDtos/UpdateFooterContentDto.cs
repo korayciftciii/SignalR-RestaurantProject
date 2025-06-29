@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Web.DataTransferObject.OpeningHourDTO;
-using Web.DataTransferObject.SocialLinkDTO;
-
-namespace Web.DataTransferObject.FooterContentDTO
+﻿namespace WebUI.DataTransferObjects.FooterContentDtos
 {
-   public class ResultFooterContentDto
+    public class UpdateFooterContentDto
     {
         public int FooterContentId { get; set; }
         public string? LocationLabel { get; set; }
@@ -17,6 +9,5 @@ namespace Web.DataTransferObject.FooterContentDTO
         public string? StoreMail { get; set; }
         public string? FooterTitle { get; set; }
         public string? FooterDescription { get; set; }
-
     }
 }

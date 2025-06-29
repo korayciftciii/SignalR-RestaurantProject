@@ -16,8 +16,6 @@ namespace Web.EntityLayer.Entities
         public string? FooterTitle { get; set; }
         public string? FooterDescription { get; set; }
 
-        public ICollection<OpeningHour> OpeningHours { get; set; } = new List<OpeningHour>();
-        public ICollection<SocialLink> SocialLinks { get; set; } = new List<SocialLink>();
     }
 
 }
